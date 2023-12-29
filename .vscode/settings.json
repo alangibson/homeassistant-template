@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": ["/home/alangibson/dev/home-automation/home-assistant/core"],
+    "python.autoComplete.extraPaths": ["/home/alangibson/dev/home-automation/home-assistant/core"],
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "/home/alangibson/dev/home-automation/home-assistant/core"
+    }
+}
