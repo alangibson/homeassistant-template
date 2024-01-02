@@ -1,16 +1,26 @@
 {
   "config": {
     "abort": {
-      "already_configured": "...",
-      "...": "..."
+      "already_configured": "Device with this id already configured"
     },
     "error": {
-      "...": "..."
+      "cannot_connect": "Failed to connect"
     },
     "step": {
       "user": {
         "data": {
-          "...": "..."
+          "unique_id": "Unique Id",
+          "host": "Hostname",
+          "username": "Username",
+          "password": "Password",
+          "force_connection_error": "Force Connection Error"
+        },
+        "data_description": {
+          "unique_id": "Globally unique, unchanging id",
+          "host": "Hostname or IP Address",
+          "username": "Username",
+          "password": "Password",
+          "force_connection_error": "DEBUG: Always raise error on connect"
         }
       }
     }
@@ -30,9 +40,10 @@
     }
   },
   "selector": {
-    "...": {
+    "force_connection_error": {
       "options": {
-        "...": "..."
+        "force_error_on": "Force Error",
+        "force_error_off": "Don't Force Error"
       }
     }
   },

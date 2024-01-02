@@ -1,15 +1,11 @@
 {
-  "domain": "hacs_template",
-  "name": "hacs-template",
+  "domain": "homeassistant_template",
+  "name": "Homeassistant Template",
   "version": "0.0.1",
-  "codeowners": [
-    "alangibson"
-  ],
+  "codeowners": ["alangibson"],
   "documentation": "",
   "iot_class": "local_polling",
   "integration_type": "device",
-  "requirements": [
-    "git+https://github.com/alangibson/pykwb.git@more-registers#pykwb==0.1.2"
-  ],
+  "requirements": [],
   "config_flow": true
 }

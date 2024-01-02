@@ -3,23 +3,20 @@
 import logging
 from typing import Any
 
-from homeassistant.helpers.update_coordinator import (
-    DataUpdateCoordinator,
-    UpdateFailed,
-)
+from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
-from .connection import HACSTemplateConnection
+from .devices import HACSTemplateDevice
 
 _LOGGER = logging.getLogger(__name__)
 
 
 class HACSTemplateCoordinator(DataUpdateCoordinator):
     """My custom coordinator.
-    
+
     https://developers.home-assistant.io/docs/integration_fetching_data/#coordinated-single-api-poll-for-data-for-all-entities
     """
 
-    def __init__(self, *args, connection: HACSTemplateConnection, **kwargs):
+    def __init__(self, *args, connection: HACSTemplateDevice, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self._connection = connection
 
@@ -29,7 +26,7 @@ class HACSTemplateCoordinator(DataUpdateCoordinator):
         This is the place to pre-process the data to lookup tables
         so entities can quickly look up their data.
         """
-       
+
         try:
             # TODO First fetch the data from your device using the connection
             data: dict[str, Any] = self._connection.poll()

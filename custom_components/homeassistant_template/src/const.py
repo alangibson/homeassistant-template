@@ -1,2 +1,2 @@
-DOMAIN = 'hacs-template'
-DEFAULT_NAME = 'hacs-template'
+DOMAIN = "homeassistant_template"
+DEFAULT_NAME = "homeassistant-template"
